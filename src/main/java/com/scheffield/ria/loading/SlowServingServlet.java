@@ -31,7 +31,7 @@ public class SlowServingServlet extends HttpServlet {
 		final String resource = req.getParameter(RESOURCE_TO_LOAD);
 		
 		try {
-			Thread.currentThread().wait(timeToWait * 1000);
+			Thread.sleep(timeToWait * 1000);
 		} catch (InterruptedException e) {
 			throw new ServletException(e);
 		}

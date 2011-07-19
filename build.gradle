@@ -17,6 +17,6 @@ task "create-dirs" << {
 }
 
 war {
-    from 'src/main/resources' // adds a file-set to the root of the archive
-    //webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
+    //from 'src/main/resources' // adds a file-set to the root of the archive
+    webXml = file('src/main/resources/web.xml') // copies a file to WEB-INF/web.xml
 }

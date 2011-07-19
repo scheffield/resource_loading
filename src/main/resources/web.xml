@@ -8,9 +8,19 @@
 		<servlet-class>com.scheffield.ria.loading.SlowServingServlet</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>com.scheffield.ria.loading.TestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/test.do</url-pattern>
+	</servlet-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>SlowServingServlet</servlet-name>
-		<url-pattern>*/**</url-pattern>
+		<url-pattern>/slow</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

@@ -4,3 +4,6 @@
 build
 bin
 .gradle
+runtime/apache-tomcat-7.0.16/webapps/ROOT/*
+runtime/apache-tomcat-7.0.16/temp/*
+runtime/apache-tomcat-7.0.16/logs/*
