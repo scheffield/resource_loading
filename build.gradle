@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile "commons-io:commons-io:2.0.1"
+	providedCompile "javax.servlet:servlet-api:2.5"
+}
+
+task "create-dirs" << {
+   sourceSets.all*.java.srcDirs*.each { it.mkdirs() }
+   sourceSets.all*.resources.srcDirs*.each { it.mkdirs() }
+}
+
+war {
+    from 'src/main/resources' // adds a file-set to the root of the archive
+    //webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
+}
