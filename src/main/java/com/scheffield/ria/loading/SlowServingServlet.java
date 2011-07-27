@@ -43,15 +43,11 @@ public class SlowServingServlet extends HttpServlet {
 			throw new ServletException(e);
 		}
 		
-		LOG.info(getServletContext().getRealPath(resource));
-		
-		final File file = new File(resource);
 		FileInputStream fileInputStream = null;
 		ServletOutputStream os = null;
 		
-		
 		try {
-			fileInputStream = new FileInputStream(file);
+			fileInputStream = new FileInputStream(getServletContext().getRealPath(resource));
 			os = resp.getOutputStream();
 			IOUtils.copy(fileInputStream, os);
 		} finally {
