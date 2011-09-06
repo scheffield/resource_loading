@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Fill an OS Elements after timeout</title>
+	</head>
+	<body>
+		<div id="os">
+			<form method="get" action="#" onsubmit="return false;">
+				
+				<div>
+					<label for="select_1">Select 1:</label>
+					<select id="select_1" name="select_1" size="4">
+						<option value="opt_1">Option 1</option>
+						<option value="opt_2">Option 2</option>
+					</select>
+				</div>
+				
+				<div>
+					<label for="select_2">Select 2:</label>
+					<select id="select_2" name="select_2" size="1">
+						<option value="opt_1">Option 1</option>
+						<option value="opt_2">Option 2</option>
+					</select>
+				</div>
+				
+				<div>
+					<input type="submit" value="doSomething" />
+				</div>
+			</form>
+		</div>
+		
+		<script type="text/javascript" src="/slow?t=20&r=/js/jquery-1.6.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('#select_1').append(
+					'<option value="opt_3">3</option>' +
+					'<option value="opt_4">4</option>' +
+					'<option value="opt_5">5</option>' +
+					'<option value="opt_6">6</option>' +
+					'<option value="opt_7">7</option>' +
+					'<option value="opt_8">8</option>');
+			$('#select_2').append(
+					'<option value="opt_3">3</option>' +
+					'<option value="opt_4">4</option>' +
+					'<option value="opt_5">5</option>' +
+					'<option value="opt_6">6</option>' +
+					'<option value="opt_7">7</option>' +
+					'<option value="opt_8">8</option>');
+			});
+		</script>
+	</body>
+</html>

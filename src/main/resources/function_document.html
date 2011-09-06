@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Function - after document.ready</title>
+		<script type="text/javascript" src="/js/jquery-1.6.2.js"></script>
+	</head>
+	<body>
+		<div>
+			<a href="#" id="instant" onclick="$(this).parent().append('<p>Link instant was clicked</p>'); return false;">instant</a>
+		</div>
+		<div>
+			<a href="#" id="after_document" onclick="return false;">after document</a>
+		</div>
+		
+		<script type="text/javascript">
+		$(function(){
+			window.setTimeout(function(){
+				$('#after_document').click(function(){
+					$(this).parent().append('<p>Link after document was clicked</p>');
+					return false;
+				});
+			}, 20000);
+		});
+			
+// percieved rendertime
+		</script>
+	</body>
+</html>

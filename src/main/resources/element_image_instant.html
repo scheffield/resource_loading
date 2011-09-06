@@ -3,11 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Percieved Rendertime O1 - text, image</title>
+		<title>Element: Image - before document.ready (instant)</title>
 	</head>
 	<body>
-		<p>Nur Text und Bilder. Kein CSS, kein JS, keine Events, keine Funktionalität</p>
-		<div>
+		<div id="images">
 			<img src="/slow?t=20&r=/img/01.jpg" />
 			<img src="/slow?t=20&r=/img/02.jpg" />
 			<img src="/slow?t=20&r=/img/03.jpg" />
@@ -16,10 +15,11 @@
 			<img src="/slow?t=20&r=/img/06.jpg" />
 			<img src="/slow?t=20&r=/img/07.jpg" />
 			<img src="/slow?t=20&r=/img/08.jpg" />
-			<img src="/slow?t=20&r=/img/09.jpg" />
-			<img src="/slow?t=20&r=/img/10.jpg" />
-			<img src="/slow?t=20&r=/img/11.jpg" />
-			<img src="/slow?t=20&r=/img/12.jpg" />
+<!-- percieved rendertime -->
+			<img src="/slow?t=40&r=/img/09.jpg" />
+			<img src="/slow?t=40&r=/img/10.jpg" />
+			<img src="/slow?t=40&r=/img/11.jpg" />
+			<img src="/slow?t=40&r=/img/12.jpg" />
 			<img src="/slow?t=20&r=/img/13.jpg" />
 			<img src="/slow?t=20&r=/img/14.jpg" />
 			<img src="/slow?t=20&r=/img/15.jpg" />

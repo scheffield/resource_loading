@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Element: OS Elements (form elements) - after document.ready before window.onload (document)</title>
+	</head>
+	<body>
+		<div id="os">
+			<form method="get" action="#" onsubmit="return false;">
+				<div>
+					<label for="text">Text</label>
+					<input name="text" type="text" value="foo" />
+				</div>
+				
+				<div>
+					<label for="select_1">Select 1:</label>
+					<select name="select_1" size="4">
+						<option value="opt_1">Option 1</option>
+						<option value="opt_2">Option 2</option>
+						<option value="opt_3">Option 3</option>
+						<option value="opt_4">Option 4</option>
+						<option value="opt_5">Option 5</option>
+						<option value="opt_6">Option 6</option>
+						<option value="opt_7">Option 7</option>
+						<option value="opt_8">Option 8</option>
+					</select>
+				</div>
+				
+				<div>
+					<input type="radio" name="sex" value="male" />
+					Male
+					<br />
+					<input type="radio" name="sex" value="female" />
+					Female
+				</div>
+				
+				<div id="form"></div>
+				
+				<div>
+					<input type="submit" value="doSomething" />
+				</div>
+			</form>
+		</div>
+		
+		<script type="text/javascript" src="/js/jquery-1.6.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var $form = $('#form');
+			
+			window.setTimeout(function(){
+				$form.append(
+						'<div>' +
+						'	<label for="select_2">Select 2:</label>' +
+						'	<select name="select_2" size="1">' +
+						'		<option value="opt_1">1</option>' +
+						'		<option value="opt_2">2</option>' +
+						'		<option value="opt_3">3</option>' +
+						'		<option value="opt_4">4</option>' +
+						'		<option value="opt_5">5</option>' +
+						'		<option value="opt_6">6</option>' +
+						'		<option value="opt_7">7</option>' +
+						'		<option value="opt_8">8</option>' +
+						'	</select>' +
+						'</div>');
+			}, 20000);
+			
+// percieved rendertime
+			
+			window.setTimeout(function(){
+				$form.append(
+						'<div>' +
+						'	<input type="checkbox" name="vehicle" value="Bike" />' +
+						'	I have a bike' +
+						'	<br />' +
+						'	<input type="checkbox" name="vehicle" value="Car" />' +
+						'	I have a car' +
+						'</div>');
+			}, 40000);
+		});
+		</script>
+	</body>
+</html>

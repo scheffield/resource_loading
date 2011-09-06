@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Overview</title>
+		<style type="text/css">
+		table {
+			border-collapse:collapse;
+		}
+		
+		table,th, td {
+			border: 1px solid black;
+		}
+		th, td {
+			padding: 7px;
+		}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Link</th>
+					<th>Erläuterung</th>
+					<th>gefühlte Ladezeit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="/element_image_instant.html">element_image_instant.html</a></td>
+					<td>Es werden 15 Bilder mit verschiedener Verzögerung geladen. Achtung: Die Reihenfolge in der die Bilder geladen werden muss nicht immer gleich sein. Das verwendete img-Tag steht stellvertretend für externe Ressourcen.</td>
+					<td>Bild 1 bis 8 werden angezeigt.</td>
+				</tr>
+				<tr>
+					<td><a href="/element_image_document.html">element_image_document.html</a></td>
+					<td>Bild 1 bis 7 wird wie in element_image_document.html direkt eingebunden und mit einer Verzögerung geladen. Bild 8 bis 15 wird erst nach <strong>document.ready</strong> eingebunden und dann ebenfalls mit einer Verzögerung geladen.</td>
+					<td>Bild 1 bis 9 werden angezeigt.</td>
+				</tr>
+				<tr>
+					<td><a href="/element_image_window.html">element_image_window.html</a></td>
+					<td>Bild 1 bis 7 wird wie in element_image_document.html direkt eingebunden und mit einer Verzögerung geladen. Bild 8 bis 15 wird erst nach <strong>window.onload</strong> eingebunden und dann ebenfalls mit einer Verzögerung geladen.</td>
+					<td>Bild 1 bis 9 werden angezeigt.</td>
+				</tr>
+				<tr>
+					<td><a href="/element_text_instant.html">element_text_instant.html</a></td>
+					<td>Es wird Text im Markup geliefert und ohne Verzögerung angezeigt. Dieser steht stellvertretend für eine Vielzahl von HTML-Tags.</td>
+					<td>Die rot hinterlegte Überschrifft ist sichtbar.</td>
+				</tr>
+				<tr>
+					<td><a href="/element_text_document.html">element_text_document.html</a></td>
+					<td>Es wird Text im Markup geliefert und ohne Verzögerung angezeigt. Zusätzlich wird Text nach dem <strong>document.ready</strong> mit einer Verzögerung eingebunden.</td>
+					<td>Die rot hinterlegte Überschrifft ist sichtbar.</td>
+				</tr>
+				<tr>
+					<td><a href="/element_os_document.html">element_os_document.html</a></td>
+					<td>Es werden Formularelemente wie select oder input angezeigt. Diese hängen üblicherweise vom Betriebsystem ab. Zusätzlich werden weitere Formularelemente nach dem <strong>document.ready</strong> mit einer Verzögerung eingebunden.</td>
+					<td>Das select mit dem Label "Select 2:" kann ausgeklappt werden.</td>
+				</tr>
+				<tr>
+					<td><a href="/function_document.html">function_document.html</a></td>
+					<td>Es werden 2 Links dargestellt. Der erste kann sofort geklickt werden und führt eine Aktion aus. Der zweite führt eine ähnliche Aktion erst nach dem <strong>document.ready</strong> und einer Verzögerung aus.</td>
+					<td>Der zweite Link führt nach einem Klick eine Aktion - anders als Pagereload - aus.</td>
+				</tr>
+				<tr>
+					<td><a href="/show.html">show.html</a></td>
+					<td>Es werden 8 Bilder mit einer Verzögerung geladen. Bild 4 bis 8 sind mittels CSS auf display: none; gesetzt. Nach dem <strong>window.onload</strong> (also nach dem Laden aller Bilder) werden Bild 4 bis 8 wieder angezeigt.</td>
+					<td>Alle 1 bis 8 sind sichtbar.</td>
+				</tr>
+				<tr>
+					<td><a href="/hide_show.html">hide_show.html</a></td>
+					<td>Es werden 8 Bilder mit einer Verzögerung geladen. Bild 4 bis 8 werden nach dem <strong>document.ready</strong> (also unmittelbar nach Laden der jQuery Bibliothek) auf display: none; gesetzt. Nach dem <strong>window.onload</strong> (also nach dem Laden aller Bilder) werden Bild 4 bis 8 wieder angezeigt.</td>
+					<td>Alle 1 bis 8 sind sichtbar.</td>
+				</tr>
+				<tr>
+					<td><a href="/select.html">select.html</a></td>
+					<td>Es werden 2 Select-Boxen mit jeweils 2 Optionen angezeigt. Nach dem <strong>document.ready</strong> (also verzögerten nach Laden der jQuery Bibliothek) werden den Select-Boxen 6 weiter Optionen hinzugefügt.</td>
+					<td>Beide Boxen zeigen alle 8 Optionen.</td>
+				</tr>
+				<tr>
+					<td><a href="/styling.html">styling.html</a></td>
+					<td>Es werden 8 Bilder mit einer Verzögerung eingebunden. Bild Nummer 4 wird mittels verzögert geladenem CSS umpositioniert.</td>
+					<td>Bild 4 wird in der endgültigen Position angezeigt.</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

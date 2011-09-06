@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Element: Image - after document.ready before window.onload (document)</title>
+	</head>
+	<body>
+		<div id="images">
+			<img src="/slow?t=20&r=/img/01.jpg" />
+			<img src="/slow?t=20&r=/img/02.jpg" />
+			<img src="/slow?t=20&r=/img/03.jpg" />
+			<img src="/slow?t=20&r=/img/04.jpg" />
+			<img src="/slow?t=20&r=/img/05.jpg" />
+			<img src="/slow?t=20&r=/img/06.jpg" />
+			<img src="/slow?t=20&r=/img/07.jpg" />
+		</div>
+		
+		<script type="text/javascript" src="/js/jquery-1.6.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var $images = $('#images');
+			
+			$images.append('<img class="added" src="/slow?t=20&r=/img/08.jpg" />');
+			$images.append('<img class="added" src="/slow?t=20&r=/img/09.jpg" />');
+// percieved rendertime
+			$images.append('<img class="added" src="/slow?t=40&r=/img/10.jpg" />');
+			$images.append('<img class="added" src="/slow?t=40&r=/img/11.jpg" />');
+			$images.append('<img class="added" src="/slow?t=40&r=/img/12.jpg" />');
+			$images.append('<img class="added" src="/slow?t=20&r=/img/13.jpg" />');
+			$images.append('<img class="added" src="/slow?t=20&r=/img/14.jpg" />');
+			$images.append('<img class="added" src="/slow?t=20&r=/img/15.jpg" />');
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>show</title>
+		<style type="text/css">
+			.hidden {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="images">
+			<img src="/slow?t=20&r=/img/01.jpg" />
+			<img src="/slow?t=20&r=/img/02.jpg" />
+			<img src="/slow?t=20&r=/img/03.jpg" />
+			<img class="hidden" src="/slow?t=20&r=/img/04.jpg" />
+			<img class="hidden" src="/slow?t=20&r=/img/05.jpg" />
+			<img class="hidden" src="/slow?t=20&r=/img/06.jpg" />
+			<img class="hidden" src="/slow?t=20&r=/img/07.jpg" />
+			<img class="hidden" src="/slow?t=20&r=/img/08.jpg" />
+		</div>
+		
+		<script type="text/javascript" src="/js/jquery-1.6.2.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('img.hidden').show()
+			});
+		</script>
+	</body>
+</html>

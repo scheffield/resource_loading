@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	padding: 5px;
+}
+
+#text, #os_elements, #images {
+	width: 30%;
+	float: left;
+}
+#text, #os_elements {
+	margin-right: 3%;
+}
+#added_os_elements {
+	display: none;
+}
+#added_text, #added_os_elements, img.added {
+	background-color: PaleGoldenRod;
+}
